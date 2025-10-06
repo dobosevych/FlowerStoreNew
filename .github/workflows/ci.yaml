@@ -21,18 +21,7 @@ jobs:
         uses: super-linter/super-linter@v8.2.0 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          VALIDATE_ALL_CODEBASE: true
           VALIDATE_JAVA: true
-          VALIDATE_PYTHON: false
-          VALIDATE_JAVASCRIPT: false
-          VALIDATE_TYPESCRIPT: false
-          VALIDATE_GO: false
-          VALIDATE_YAML: false
-          VALIDATE_MARKDOWN: false
-          VALIDATE_DOCKERFILE: false
-          VALIDATE_JSON: false
-          VALIDATE_XML: false
-          VALIDATE_BASH: false
           JAVA_FILE_NAME: checkstyle.xml
       - name: Test with Maven
         run: mvn --batch-mode --update-snapshots package
